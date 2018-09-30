@@ -45,3 +45,10 @@ print("\n**************************************************")
 print ("\nAcceso mediante mascaras:")
 mascara = array_prueba < 0.5
 print ("Array con valores < 0.5:",array_prueba[mascara])
+
+#Para iterar sobre multimensionales es mejor utilizar "flat"
+for i in array_prueba:
+    print (i,"\n")
+    
+for i in array_prueba.flat:
+    print (i,"\n")
