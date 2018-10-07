@@ -64,7 +64,7 @@ print ("Indice de correlación de Pearson:",np.corrcoef(a))
 
 
 print("********************************************")
-#Creación de arrays
+#Creación de arrays en base a la distribución normal -> Gauss.
 print(np.random.normal(size=(5,2)))
 
 
