@@ -38,7 +38,39 @@ p_inter=contenido[1:,5]
 p_inter=p_inter.astype(int)
 p_totales=p_nacion+p_inter
 
-
+print("***************************")
 #podemos crear un dataframe de un diccionario de ndarray
 df=pd.DataFrame({'fechas':fechas,'nacionales':p_nacion,'Internacionales':p_inter,'Totales':p_totales})
 print(df)
+print("***************************")
+#podemos crear un dataframe a partir de una lista de diccionarios
+d= [{'a':0, 'b':1, 'c':2},{'f':300, 'g':400, 'h':500}]
+print (d)
+df=pd.DataFrame(d)
+print (df)
+print("***************************")
+#las claves del diccionario actuan como etiquetas de las columnas
+d= [{'a':0, 'b':1, 'c':2},{'a':300, 'b':400, 'c':500}]
+print (d)
+df=pd.DataFrame(d)
+print (df)
+print("***************************")
+#Se pueden especificar las etiquetas de las filas
+df2=pd.DataFrame(d, index=['first','second'])
+print (df2)
+print("***************************")
+#Se puede crear como un diccionario de series
+s= {'One': pd.Series([45, 13, 53, 234],index=['a','b','c','d']),'Two': pd.Series([452, 123, 353, 2234],index=['a','b','c','d'])}
+print(pd.DataFrame(s))
+s2= {'One': pd.Series([45, 13, 53, 234],index=['a','b','c','d']),'Two': pd.Series([452, 123, 353, 2234],index=['a','r','y','d'])}
+print(pd.DataFrame(s2))
+print(pd.DataFrame(s2,index=['a','b']))
+print("***************************")
+#Si no se pasan columnas
+s= {'One': pd.Series([45, 13, 53, 234]),'Two': pd.Series([452, 123, 353, 2234])}
+print(pd.DataFrame(s))
+
+print("***************************")
+#Array Estructurado
+
+
