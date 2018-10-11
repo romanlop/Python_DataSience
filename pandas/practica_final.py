@@ -40,3 +40,8 @@ print(sueldos_df)
 print("Diferencia mayor que 100****************")
 mascara=abs(sueldos_df['Diferencia'])>50
 print("Fechas con mas de 20000 vuelos:\n",sueldos_df[mascara])
+
+b=[1,2,3,4,5]
+c=['a','b','c','d','e']
+a=dict(zip(b,c))
+print(a)
